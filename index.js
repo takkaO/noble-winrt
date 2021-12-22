@@ -10,7 +10,7 @@ if (os.platform() === 'win32') {
 		(ver[0] === 10 && ver[1] === 0 && ver[2] >= 15063))) {
 		module.exports = require('noble');
 	} else {
-		const Noble = require('noble/lib/noble');
+		const Noble = require('@abandonware/noble/lib/noble');
 		const winrtBindings = require('./lib/binding.js');
 		var nobleInstance = new Noble(winrtBindings);
 		module.exports = nobleInstance;
